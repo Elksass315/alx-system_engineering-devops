@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+f=4
+e=8
+i=1
+while [ $i -le 10 ]
+do
+	if [ "$i" == "$f" ]
+	then
+		echo "bad luck"
+	elif [ "$i" == "$e" ]
+	then
+		echo "good luck"
+	else
+		echo "Best School"
+	fi
+	((i++))
+done
