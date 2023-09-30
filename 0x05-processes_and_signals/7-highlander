@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Bash script.
+handle_sigterm() {
+  echo "I am invincible!!!"
+  while true; do sleep 1; done
+}
+
+trap 'handle_sigterm' SIGTERM
+
+while true
+do
+  echo "To infinity and beyond"
+  sleep 2
+done
