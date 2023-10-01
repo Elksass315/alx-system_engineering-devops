@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Alx
+echo $$ > /var/run/myscript.pid
+
+term_handler() {
+    echo "I hate the kill command"
+    cleanup_and_exit
+}
+
+int_handler() {
+    echo "Y U no love me?!"
+}
+
+quit_handler() {
+    cleanup_and_exit
+}
+
+cleanup_and_exit() {
+    rm /var/run/myscript.pid
+    exit 1
+}
+
+trap term_handler SIGTERM
+trap int_handler SIGINT
+trap quit_handler SIGQUIT
+
+while true; do
+    echo "To infinity and beyond"
+    sleep 1
+done
