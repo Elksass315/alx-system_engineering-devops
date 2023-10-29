@@ -1,6 +1,6 @@
 # Simple Web Stack
 
-![Image of a simple web stack](simpleWepStack.png)
+![](simpleWepStack.png)
 
 ## Description
 
