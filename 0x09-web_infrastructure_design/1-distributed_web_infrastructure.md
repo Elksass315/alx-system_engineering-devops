@@ -1,4 +1,4 @@
-# Simple Web Stack
+# Distributed Web Infrastructure
 
 ![Distributed Web Infrastructure](1.DistributedWebInfrastructure.webp)
 
