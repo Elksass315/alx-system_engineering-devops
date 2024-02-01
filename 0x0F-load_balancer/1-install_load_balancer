@@ -13,8 +13,8 @@ frontend sammykingx.tech
 
 backend web_servers
         balance roundrobin
-        server 64820-web-01 54.173.84.39:80
-        server 64820-web-02 100.25.183.235:80
+        server 350362-web-01 54.173.84.39:80
+        server 350362-web-02 100.25.183.235:80
 ' >> sudo /etc/haproxy/haproxy.cfg
 
 # Restart HAproxy service
