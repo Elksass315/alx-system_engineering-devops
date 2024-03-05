@@ -5,16 +5,10 @@
 import requests
 
 def number_of_subscribers(subreddit):
-    """
-        How many subs? reddit API
-        :arg
-            subreddit: username
-
-        :return number of subscribers
-    """
-
-    req = requests.get(f"https://www.reddit.com/r/{subreddit}/about.json", 
-            allow_redirects=False)
+    """How many subs? reddit """
+    url = f"https://www.reddit.com/r/{subreddit}/about.json"
+    headers = {"User-Agent": "Mozilla/5.0"}
+    res = requests.get(url, headers=headers, allow_redirects=False)
     try:
         return req.json()['data']['subscribers']
     except:
