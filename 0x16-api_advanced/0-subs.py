@@ -13,8 +13,8 @@ def number_of_subscribers(subreddit):
         :return number of subscribers
     """
 
-    req = requests.get(f"https://www.reddit.com/r/{subreddit}/about.json", allow_redirects=False)
-
+    req = requests.get(f"https://www.reddit.com/r/{subreddit}/about.json", 
+            allow_redirects=False)
     try:
         return req.json()['data']['subscribers']
     except:
